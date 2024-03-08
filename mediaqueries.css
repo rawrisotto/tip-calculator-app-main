@@ -1,0 +1,44 @@
+@media (min-width: 768px) {
+  .tip-calculator {
+    flex-direction: row;
+    width: 910px;
+    gap: 1rem;
+    padding: 2rem;
+  }
+
+  .input-wrapper {
+    flex-basis: 50%;
+    width: 100%;
+    gap: 2.5rem;
+  }
+
+  .results-wrapper {
+    flex-basis: 50%;
+    width: 100%;
+  }
+
+  .tip-wrapper {
+    gap: 1.125rem;
+    grid-template-columns: repeat(auto-fill, 120px);
+  }
+
+  .tip-label {
+    width: 120px;
+  }
+
+  .tip-custom {
+    width: 120px;
+  }
+
+  .results-wrapper {
+    padding: 2.5rem 2.25rem;
+  }
+
+  .amount {
+    font-size: 3rem;
+  }
+
+  .btn {
+    margin-top: 6rem;
+  }
+}
