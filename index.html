@@ -9,47 +9,79 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <main>
-      <h1><img src="./images/logo.svg" alt="SPLITTER logo" /></h1>
+      <h1><img class="logo" src="./images/logo.svg" alt="SPLITTER logo" /></h1>
 
-      <section>
-        <h2 class="section-label">Bill</h2>
-        <input id="bill" type="number" />
+      <section class="tip-calculator">
+        <!-- Where users will enter their input -->
+        <div class="input-wrapper">
+          <!-- Bill Input -->
+          <div>
+            <h2 class="section-label">Bill</h2>
+            <div class="amount-input">
+              <img src="./images/icon-dollar.svg" alt="dollar icon" />
+              <input type="number" class="number-input" />
+            </div>
+          </div>
 
-        <h2 class="section-label">Select Tip %</h2>
-        <div class="tip-wrapper">
-          <input type="radio" id="tip-5" name="tip" value="5" />
-          <label for="tip-5" class="tip-label">5%</label>
+          <!-- Tip Input -->
+          <div>
+            <h2 class="section-label">Select Tip %</h2>
+            <div class="tip-wrapper">
+              <input type="radio" id="tip-5" name="tip" value="5" />
+              <label for="tip-5" class="tip-label">5%</label>
 
-          <input type="radio" id="tip-10" name="tip" value="10" />
-          <label for="tip-10" class="tip-label">10%</label>
+              <input type="radio" id="tip-10" name="tip" value="10" />
+              <label for="tip-10" class="tip-label">10%</label>
 
-          <input type="radio" id="tip-5" name="tip" value="5" />
-          <label for="tip-5" class="tip-label">15%</label>
+              <input type="radio" id="tip-15" name="tip" value="15" />
+              <label for="tip-15" class="tip-label">15%</label>
 
-          <input type="radio" id="tip-5" name="tip" value="5" />
-          <label for="tip-5" class="tip-label">25%</label>
+              <input type="radio" id="tip-25" name="tip" value="25" />
+              <label for="tip-25" class="tip-label">25%</label>
 
-          <input type="radio" id="tip-5" name="tip" value="5" />
-          <label for="tip-5" class="tip-label">50%</label>
+              <input type="radio" id="tip-50" name="tip" value="50" />
+              <label for="tip-50" class="tip-label">50%</label>
 
-          <input type="radio" id="tip-5" name="tip" value="5" />
-          <label for="tip-5" class="tip-label">Custom</label>
+              <input
+                class="tip-custom number-input"
+                type="number"
+                id="tip-custom"
+                name="tip"
+                placeholder="Custom"
+              />
+              <!-- <label for="tip-custom" class="tip-label custom">Custom</label> -->
+            </div>
+          </div>
+
+          <!-- Number of People Input -->
+          <div>
+            <h2 class="section-label">Number of People</h2>
+            <div class="amount-input">
+              <img src="./images/icon-person.svg" alt="person icon" />
+              <input type="number" class="number-input" />
+            </div>
+          </div>
         </div>
 
-        <h2 class="section-label">Number of People</h2>
-        <input id="number-people" type="number" />
-
-        <div class="results">
+        <!-- Where the results will be displayed -->
+        <div class="results-wrapper">
           <div class="result-section">
-            <h2 class="section-label">Tip Amount <span>/ person</span></h2>
+            <h2 class="section-label result-label">Tip Amount <span>/ person</span></h2>
             <p class="amount">$4.27</p>
           </div>
           <div class="result-section">
-            <h2 class="section-label">Total <span>/ person</span></h2>
+            <h2 class="result-label">Total <span>/ person</span></h2>
             <p class="amount">$32.79</p>
           </div>
           <button class="btn">RESET</button>

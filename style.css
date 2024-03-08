@@ -1,0 +1,238 @@
+/* CSS RESET */
+/*
+    1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+*/
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+/*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --clr-strongCyan: hsl(172, 67%, 45%);
+  --clr-veryDarkCyan: hsl(183, 100%, 15%);
+  --clr-darkGrayishCyan: hsl(186, 14%, 43%);
+  --clr-grayishCyan: hsl(184, 14%, 56%);
+  --clr-lightGrayishCyan: hsl(185, 41%, 84%);
+  --clr-veryLightGrayishCyan: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --ff-base: "Space Mono", monospace;
+  --fw-700: 700;
+}
+
+/* General Styling */
+body, html {
+  min-height: 100vh;
+  width: 100vw;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-700);
+  background: var(--clr-lightGrayishCyan);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  margin: 2.5rem;
+}
+
+/* Tip Calculator Styling */
+.tip-calculator {
+  background: var(--clr-white);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 375px;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 2rem;
+}
+
+.section-label {
+  color: var(--clr-darkGrayishCyan);
+  margin-bottom: 0.5rem;
+}
+
+/* Amount Input Styling */
+.amount-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--clr-veryLightGrayishCyan);
+  border-radius: 0.25rem;
+  border: 2px solid var(--clr-veryLightGrayishCyan);
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.amount-input .number-input {
+  width: 80%;
+}
+
+.number-input {
+  color: var(--clr-veryDarkCyan);
+  border: none;
+  background: var(--clr-veryLightGrayishCyan);
+  padding: 0.25rem 1rem;
+  text-align: right;
+}
+
+.amount-input input:focus {
+  outline: none;
+}
+
+.amount-input:focus-within {
+  border-color: var(--clr-strongCyan);
+}
+
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Tip Select Styling */
+.tip-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 150px);
+  gap: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.tip-label {
+  padding: 0.375rem 0;
+  background: var(--clr-veryDarkCyan);
+  color: var(--clr-white);
+  width: 150px;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.tip-wrapper input[type="radio"] {
+  display: none;
+}
+
+.tip-wrapper input[type="radio"]:checked + .tip-label {
+  background: var(--clr-strongCyan);
+  color: var(--clr-veryDarkGrayishCyan);
+}
+
+.tip-wrapper input[type="radio"]:hover + .tip-label {
+  background: var(--clr-lightGrayishCyan);
+  color: var(--clr-veryDarkGrayishCyan);
+}
+
+.tip-custom {
+  border-radius: 0.25rem;
+  border: 2px solid var(--clr-veryLightGrayishCyan);
+}
+
+.tip-custom::placeholder {
+  color: var(--clr-darkGrayishCyan);
+}
+
+.tip-custom:focus {
+  outline: none;
+  border: 2px solid var(--clr-strongCyan);
+}
+
+/* Results Styling */
+.results-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  background: var(--clr-veryDarkCyan);
+  border-radius: 0.75rem;
+  padding: 2.375rem 1.5rem;
+}
+
+.result-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-label {
+  color: var(--clr-white);
+  margin-bottom: 0;
+}
+
+.result-label span {
+  display: block;
+  font-size: 0.825rem;
+  color: var(--clr-darkGrayishCyan);
+}
+
+.amount {
+  color: var(--clr-strongCyan);
+  font-size: 2rem;
+}
+
+.btn {
+  background: var(--clr-strongCyan);
+  padding: 0.5rem 0;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1.125rem;
+  color: var(--clr-veryDarkCyan);
+}
