@@ -1,4 +1,8 @@
-@media (min-width: 768px) {
+@media (min-width: 950px) {
+  body {
+    align-items: center;
+    justify-content: center;
+  }
   .tip-calculator {
     flex-direction: row;
     width: 910px;
