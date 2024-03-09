@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/rawrisotto/tip-calculator-app-main)
-- Live Site URL: [Netlify](https://your-live-site-url.com)
+- Live Site URL: [Netlify](https://65ebd591f0eed84cf24a2d82--teal-gumdrop-f6088a.netlify.app/)
 
 ## My process
 
