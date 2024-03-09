@@ -59,6 +59,7 @@ h6 {
 
 :root {
   --clr-strongCyan: hsl(172, 67%, 45%);
+  --clr-strongCyan-20: hsl(172, 67%, 45%, 20%);
   --clr-veryDarkCyan: hsl(183, 100%, 15%);
   --clr-darkGrayishCyan: hsl(186, 14%, 43%);
   --clr-grayishCyan: hsl(184, 14%, 56%);
@@ -102,7 +103,7 @@ main {
   width: 375px;
 }
 
-.input-wrapper {
+.input-section {
   display: flex;
   flex-direction: column;
   padding: 0.5rem;
@@ -110,8 +111,19 @@ main {
 }
 
 .section-label {
+  display: flex;
+  justify-content: space-between;
   color: var(--clr-darkGrayishCyan);
   margin-bottom: 0.5rem;
+}
+
+.section-label p {
+  display: none;
+}
+
+.section-label .error-message {
+  color: tomato;
+  display: block;
 }
 
 /* Amount Input Styling */
@@ -150,6 +162,10 @@ main {
 .number-input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
+}
+
+.error-border {
+  border-color: tomato;
 }
 
 /* Tip Select Styling */
@@ -199,7 +215,7 @@ main {
 }
 
 /* Results Styling */
-.results-wrapper {
+.results-section {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -208,7 +224,7 @@ main {
   padding: 2.375rem 1.5rem;
 }
 
-.result-section {
+.result-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -231,10 +247,23 @@ main {
 }
 
 .btn {
-  background: var(--clr-strongCyan);
+  background: var(--clr-strongCyan-20);
   padding: 0.5rem 0;
   border: none;
   border-radius: 0.25rem;
   font-size: 1.125rem;
   color: var(--clr-veryDarkCyan);
+  cursor: pointer;
+}
+
+.btn.active {
+  background: var(--clr-strongCyan);
+}
+
+.btn.active:hover {
+  background: var(--clr-lightGrayishCyan);
+}
+
+.error-message {
+  border-color: red;
 }

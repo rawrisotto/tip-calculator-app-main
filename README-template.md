@@ -30,20 +30,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+![solution](./design/solution.png)
+![solution-active](./design/solution-active.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [GitHub](https://github.com/rawrisotto/tip-calculator-app-main)
+- Live Site URL: [Netlify](https://your-live-site-url.com)
 
 ## My process
 
@@ -62,27 +55,84 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- How to change placeholder color
+```css
+.tip-custom::placeholder {
+  color: var(--clr-darkGrayishCyan);
+}
+```
 
-To see how you can add code snippets, see below:
-
+- How to create input text with image in it (not 100% sure if correct)
 ```html
-<h1>Some HTML code I'm proud of</h1>
+<div class="amount-input" id="number-people-amount-input">
+  <img src="./images/icon-person.svg" alt="person icon" />
+  <input type="number" class="number-input" id="number-people-input" />
+</div>
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.amount-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--clr-veryLightGrayishCyan);
+  border-radius: 0.25rem;
+  border: 2px solid var(--clr-veryLightGrayishCyan);
+  font-size: 1.5rem;
+  padding-left: 1rem;
 }
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+
+.amount-input .number-input {
+  width: 80%;
+}
+
+.number-input {
+  color: var(--clr-veryDarkCyan);
+  border: none;
+  background: var(--clr-veryLightGrayishCyan);
+  padding: 0.25rem 1rem;
+  text-align: right;
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
+- How to create custom radio checkboxes
+```html
+<input type="radio" id="tip-5" name="tip" value="5" />
+<label for="tip-5" class="tip-label">5%</label>
+```
+```css
+.tip-label {
+  padding: 0.375rem 0;
+  background: var(--clr-veryDarkCyan);
+  color: var(--clr-white);
+  width: 150px;
+  text-align: center;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+.tip-wrapper input[type="radio"] {
+  display: none;
+}
+
+.tip-wrapper input[type="radio"]:checked + .tip-label {
+  background: var(--clr-strongCyan);
+  color: var(--clr-veryDarkGrayishCyan);
+}
+
+.tip-wrapper input[type="radio"]:hover + .tip-label {
+  background: var(--clr-lightGrayishCyan);
+  color: var(--clr-veryDarkGrayishCyan);
+}
+```
+
+- Remove spinner button for number type
+```css
+.number-input::-webkit-outer-spin-button,
+.number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+```
 
 ### Continued development
 

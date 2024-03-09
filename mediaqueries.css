@@ -3,6 +3,7 @@
     align-items: center;
     justify-content: center;
   }
+
   .tip-calculator {
     flex-direction: row;
     width: 910px;
@@ -10,15 +11,16 @@
     padding: 2rem;
   }
 
-  .input-wrapper {
+  .input-section {
     flex-basis: 50%;
     width: 100%;
     gap: 2.5rem;
   }
 
-  .results-wrapper {
+  .results-section {
     flex-basis: 50%;
     width: 100%;
+    padding: 2.5rem 2.25rem;
   }
 
   .tip-wrapper {
@@ -27,15 +29,11 @@
   }
 
   .tip-label {
-    width: 120px;
+    width: 125px;
   }
 
   .tip-custom {
-    width: 120px;
-  }
-
-  .results-wrapper {
-    padding: 2.5rem 2.25rem;
+    width: 125px;
   }
 
   .amount {
